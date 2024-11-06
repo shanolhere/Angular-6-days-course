@@ -1,0 +1,19 @@
+<section>
+    <h3> Create New Appointment </h3>
+
+    <form #appointmentForm ="ngForm" (ngSubmit)="handleSubmit(appointmentForm)">
+        <input type="text" placeholder="Appointment description" name="title" #title="ngModel" ngModel required/> 
+        <input type="date" #date="ngModel" name="date" ngModel required/>
+        <input type="submit" value="Add"/>
+    </form>
+    
+</section>
+<br><br>
+<section>
+    <h2>Appointments</h2>
+
+    <div *ngFor="let appointment of appointmentsList; let i = index" ngClass="appointmentList">
+        <p>{{appointment.title}} {{appointment.date}}</p>
+        <button (click)="deleteAppointment(i)">Delete</button>
+    </div>
+</section>
