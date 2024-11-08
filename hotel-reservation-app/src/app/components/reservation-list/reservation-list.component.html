@@ -1,0 +1,12 @@
+<p>List of all Reservations</p>
+{{roomsCount}}
+
+<div *ngFor="let room of roomsList; let i = index">
+    <div ngClass="">
+      <p>{{room.guestName}} - {{room.guestEmailId}} booked on {{room.checkInDate}} - {{room.checkOutDate}}</p>
+      <div ngClass="buttons">
+          <button ngClass="editBtn" (click)="editReservation(i, room)">Edit</button>
+          <button ngClass="deleteBtn" (click)="deleteReservation(i)">Delete</button>
+      </div>
+    </div>  
+</div>

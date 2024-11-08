@@ -1,0 +1,35 @@
+<div ngClass="">
+
+    <h3>Book a Room</h3>
+
+    <form #roomForm="ngForm" (ngSubmit)="handleSubmit(roomForm)">
+        <div ngClass="formGroup">
+            <div ngClass="formControl">
+                <label>Guest Name:</label>
+                <input type="text" placeholder="Enter Guest Name" name="guestName" ngModel #guestName="ngModel" required minLength="1"/>
+            </div>
+            <div ngClass="formControl">
+                <label>Guest Email Address:</label>
+                <input type="text" placeholder="Enter Guest Email Address" name="guestEmailId" ngModel #guestEmailId="ngModel" required email="true"/>
+            </div>
+        </div>
+        <div ngClass="formGroup">
+            <div ngClass="formControl">
+                <label>CheckIn Date:</label>
+                <input type="date" name="checkInDate" ngModel #checkInDate="ngModel" required/>
+            </div>
+            <div ngClass="formControl">
+                <label>CheckOut Date:</label>
+                <input type="date" name="checkOutDate" ngModel #checkOutDate="ngModel" required/>
+            </div>
+        </div>
+        <div ngClass="formGroup">
+            <div ngClass="formControl">
+                <label>Room Number:</label>
+                <input type="number" placeholder="Enter room Number" name="roomNumber" ngModel #roomNumber="ngModel" required minLength="1"/>
+            </div>
+            <input type="submit" value="Add" [disabled]="!roomForm.valid"/>
+        </div>
+    </form>
+
+</div>

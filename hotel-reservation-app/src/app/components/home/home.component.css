@@ -1,0 +1,29 @@
+h3{
+    text-align: center;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.formGroup{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    width:100%;
+}
+.formControl {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:5px;
+}
+label {
+    font-weight: 500;
+}
